@@ -136,6 +136,7 @@ class _UpdateProductPageState extends State<UpdateProductPage> {
                           ),
                         ),
                       );
+                      Navigator.of(context).pop();
                     } catch (e) {
                       log('UpdateProductPage $e');
                     }

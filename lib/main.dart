@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:store_app/pages/bottom_navigation_bar_page.dart';
 import 'package:store_app/pages/cart_shopping_page.dart';
 import 'package:store_app/pages/favo_page.dart';
 import 'package:store_app/pages/home_page.dart';
@@ -29,9 +30,11 @@ class StoreApp extends StatelessWidget {
         NewHomePage.id: (context) => NewHomePage(),
         FavePage.id: (context) => const FavePage(),
         ProfilePage.id: (context) => const ProfilePage(),
-        CartShoppingPage.id: (context) => const CartShoppingPage()
+        CartShoppingPage.id: (context) => const CartShoppingPage(),
+        BottomNavigationBarPage.id: (context) =>
+            const BottomNavigationBarPage(),
       },
-      initialRoute: NewHomePage.id,
+      initialRoute: BottomNavigationBarPage.id,
     );
   }
 }
