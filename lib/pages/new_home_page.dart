@@ -4,15 +4,15 @@ import 'package:store_app/pages/cart_shopping_page.dart';
 import 'package:store_app/widgets/display_all_categories.dart';
 import 'package:store_app/widgets/display_products.dart';
 
-class NewHomePage extends StatefulWidget {
-  const NewHomePage({super.key});
-  static const id = 'NewHomePage';
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+  static const id = 'HomePage';
 
   @override
-  State<NewHomePage> createState() => _NewHomePageState();
+  State<HomePage> createState() => _HomePageState();
 }
 
-class _NewHomePageState extends State<NewHomePage> {
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

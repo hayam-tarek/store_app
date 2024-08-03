@@ -16,7 +16,7 @@ class _BottomNavigationBarPageState extends State<BottomNavigationBarPage> {
   int currentIndex = 1;
   List<Widget> screens = [
     const FavePage(),
-    const NewHomePage(),
+    const HomePage(),
     const ProfilePage(),
   ];
 

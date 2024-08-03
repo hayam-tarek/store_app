@@ -25,7 +25,7 @@ class StoreApp extends StatelessWidget {
         UpdateProductPage.id: (context) => const UpdateProductPage(),
         ProductDataPage.id: (context) => const ProductDataPage(),
         // CategoryPage.id: (context) => CategoryPage(),
-        NewHomePage.id: (context) => NewHomePage(),
+        HomePage.id: (context) => HomePage(),
         FavePage.id: (context) => const FavePage(),
         ProfilePage.id: (context) => const ProfilePage(),
         CartShoppingPage.id: (context) => const CartShoppingPage(),
