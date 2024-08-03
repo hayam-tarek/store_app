@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:store_app/pages/bottom_navigation_bar_page.dart';
 import 'package:store_app/pages/cart_shopping_page.dart';
 import 'package:store_app/pages/favo_page.dart';
-import 'package:store_app/pages/home_page.dart';
 import 'package:store_app/pages/new_home_page.dart';
 import 'package:store_app/pages/product_data_page.dart';
 import 'package:store_app/pages/profile_page.dart';
@@ -23,7 +22,6 @@ class StoreApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       routes: {
-        HomePage.id: (context) => const HomePage(),
         UpdateProductPage.id: (context) => const UpdateProductPage(),
         ProductDataPage.id: (context) => const ProductDataPage(),
         // CategoryPage.id: (context) => CategoryPage(),
