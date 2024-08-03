@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 import 'package:store_app/helper/api.dart';
 import 'package:store_app/helper/constant.dart';
 
-class GetAllCategories {
+class GetAllCategoriesService {
   Future<List<dynamic>> getAllCategories() async {
     try {
       http.Response response =

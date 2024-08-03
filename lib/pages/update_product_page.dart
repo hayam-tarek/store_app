@@ -113,7 +113,7 @@ class _UpdateProductPageState extends State<UpdateProductPage> {
                     });
                     // formKey.currentState!.validate();
                     try {
-                      await UpdateProduct().updateProduct(
+                      await UpdateProductService().updateProduct(
                         id: product.id,
                         title: title ?? product.title,
                         price: price ?? product.price.toString(),

@@ -15,7 +15,7 @@ class _DisplayAllCategoriesState extends State<DisplayAllCategories> {
   var future;
   @override
   void initState() {
-    future = GetAllCategories().getAllCategories();
+    future = GetAllCategoriesService().getAllCategories();
     super.initState();
   }
 

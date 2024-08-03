@@ -20,11 +20,11 @@ class _DisplayProductsState extends State<DisplayProducts> {
   @override
   void initState() {
     if (widget.category != null) {
-      future = GetCategory().getCategory(
+      future = GetCategoryService().getCategory(
         categoryName: widget.category!,
       );
     } else {
-      future = GetAllProducts().getAllProducts();
+      future = GetAllProductsService().getAllProducts();
     }
     super.initState();
   }

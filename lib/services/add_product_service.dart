@@ -6,7 +6,7 @@ import 'package:store_app/helper/api.dart';
 import 'package:store_app/helper/constant.dart';
 import 'package:store_app/models/product_model.dart';
 
-class AddProduct {
+class AddProductService {
   Future<ProductModel?> addProduct({
     required String title,
     required String price,

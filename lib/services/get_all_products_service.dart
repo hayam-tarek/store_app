@@ -6,7 +6,7 @@ import 'package:store_app/helper/api.dart';
 import 'package:store_app/helper/constant.dart';
 import 'package:store_app/models/product_model.dart';
 
-class GetAllProducts {
+class GetAllProductsService {
   Future<List<ProductModel>> getAllProducts() async {
     try {
       http.Response response = await API().get(url: '$kBaseURL/products');
