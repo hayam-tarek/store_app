@@ -5,6 +5,7 @@ import 'package:http/http.dart' as http;
 import 'package:store_app/helper/api.dart';
 import 'package:store_app/helper/constant.dart';
 import 'package:store_app/models/product_model.dart';
+import 'package:store_app/models/rating_model.dart';
 
 class UpdateProductService {
   Future<ProductModel?> updateProduct({
@@ -14,6 +15,7 @@ class UpdateProductService {
     required String description,
     required String image,
     required String category,
+    required RatingModel rating,
   }) async {
     try {
       http.Response response = await API().put(
@@ -27,6 +29,9 @@ class UpdateProductService {
         },
       );
       Map<String, dynamic> product = jsonDecode(response.body);
+      product.addAll({
+        'rating': {'rate': rating.rate, 'count': rating.count}
+      });
       return ProductModel.fromJson(product);
     } catch (e) {
       log('UpdateProductService $e');

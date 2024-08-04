@@ -120,6 +120,7 @@ class _UpdateProductPageState extends State<UpdateProductPage> {
                         description: description ?? product.description,
                         image: image ?? product.image,
                         category: product.category,
+                        rating: product.rating!,
                       );
                       ScaffoldMessenger.of(context).showSnackBar(
                         const SnackBar(

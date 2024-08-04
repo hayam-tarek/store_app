@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:store_app/pages/favo_page.dart';
-import 'package:store_app/pages/new_home_page.dart';
+import 'package:store_app/pages/home_page.dart';
 import 'package:store_app/pages/profile_page.dart';
 
 class BottomNavigationBarPage extends StatefulWidget {
