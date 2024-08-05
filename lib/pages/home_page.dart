@@ -51,10 +51,10 @@ class _HomePageState extends State<HomePage> {
           ),
         ],
       ),
-      body: CustomScrollView(
+      body: const CustomScrollView(
         scrollDirection: Axis.vertical,
         slivers: [
-          const SliverToBoxAdapter(
+          SliverToBoxAdapter(
             child: Padding(
               padding: EdgeInsets.symmetric(
                 horizontal: 5,
@@ -70,16 +70,16 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
-          const SliverToBoxAdapter(
+          SliverToBoxAdapter(
             child: DisplayAllCategories(),
           ),
-          const SliverToBoxAdapter(
+          SliverToBoxAdapter(
             child: Divider(
               indent: 10,
               endIndent: 10,
             ),
           ),
-          const SliverToBoxAdapter(
+          SliverToBoxAdapter(
             child: Padding(
               padding: EdgeInsets.symmetric(
                 horizontal: 5,

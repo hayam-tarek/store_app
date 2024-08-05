@@ -5,11 +5,11 @@ import 'package:store_app/services/get_category_service.dart';
 import 'package:store_app/widgets/products_grid_viwe.dart';
 
 class DisplayProducts extends StatefulWidget {
-  DisplayProducts({
+  const DisplayProducts({
     super.key,
     this.category,
   });
-  String? category;
+  final String? category;
 
   @override
   State<DisplayProducts> createState() => _DisplayProductsState();

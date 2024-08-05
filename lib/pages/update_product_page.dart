@@ -113,31 +113,33 @@ class _UpdateProductPageState extends State<UpdateProductPage> {
                     });
                     // formKey.currentState!.validate();
                     try {
-                      await UpdateProductService().updateProduct(
-                        id: product.id,
-                        title: title ?? product.title,
-                        price: price ?? product.price.toString(),
-                        description: description ?? product.description,
-                        image: image ?? product.image,
-                        category: product.category,
-                        rating: product.rating!,
-                      );
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(
-                          backgroundColor: Colors.black,
-                          content: Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Icon(
-                                Icons.check,
-                                color: Colors.green,
-                              ),
-                              Text(' Update done successfuly'),
-                            ],
+                      if (formKey.currentState!.validate()) {
+                        await UpdateProductService().updateProduct(
+                          id: product.id,
+                          title: title ?? product.title,
+                          price: price ?? product.price.toString(),
+                          description: description ?? product.description,
+                          image: image ?? product.image,
+                          category: product.category,
+                          rating: product.rating!,
+                        );
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          const SnackBar(
+                            backgroundColor: Colors.black,
+                            content: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Icon(
+                                  Icons.check,
+                                  color: Colors.green,
+                                ),
+                                Text(' Update done successfuly'),
+                              ],
+                            ),
                           ),
-                        ),
-                      );
-                      Navigator.of(context).pop();
+                        );
+                        Navigator.of(context).pop();
+                      }
                     } catch (e) {
                       log('UpdateProductPage $e');
                     }
