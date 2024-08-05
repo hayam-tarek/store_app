@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:store_app/pages/add_product_page.dart';
 import 'package:store_app/pages/cart_shopping_page.dart';
 import 'package:store_app/widgets/display_all_categories.dart';
 import 'package:store_app/widgets/display_products.dart';
@@ -16,6 +17,17 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.black,
+        child: const Icon(
+          Icons.add_rounded,
+          color: Colors.green,
+          size: 35,
+        ),
+        onPressed: () {
+          Navigator.pushNamed(context, AddProductPage.id);
+        },
+      ),
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,

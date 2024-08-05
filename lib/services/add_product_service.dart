@@ -26,6 +26,9 @@ class AddProductService {
         },
       );
       Map<String, dynamic> product = jsonDecode(response.body);
+      product.addAll({
+        'rating': {'rate': 0, 'count': 0}
+      });
       return ProductModel.fromJson(product);
     } catch (e) {
       log('AddProductService $e');
